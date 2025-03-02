@@ -1,13 +1,26 @@
 {
-  "name": "13-bucket",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "description": ""
+    "name": "13-bucket",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "test": "NODE_ENV=development mocha",
+        "dev": "NODE_ENV=development ts-node-dev --respawn apps/main.ts",
+        "start": "NODE_ENV=production node dist/apps/main.js",
+        "build": "tsc && resolve-tspaths"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs",
+    "description": "",
+    "dependencies": {
+        "@types/express": "^5.0.0",
+        "@types/node": "^22.13.8",
+        "express": "^4.21.2",
+        "module-alias": "^2.2.3",
+        "resolve-tspaths": "^0.8.23"
+    },
+    "devDependencies": {
+        "ts-node": "^10.9.2"
+    }
 }
