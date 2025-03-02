@@ -2,6 +2,7 @@ import { NODE_ENV, ENV, EXT, envLocation } from './env/env.config';
 import { CONSTANT, ENV_TYPE, EXT_TYPE } from './constants/typ.constant';
 import { DEV_CONSTANT } from './constants/dev.constant';
 import { PRO_CONSTANT } from './constants/pro.constant';
+import { logger as LOGGER } from './logger/winston.logger';
 
 const CURRENT = {
     DEV: DEV_CONSTANT,
@@ -21,4 +22,5 @@ export {
     envLocation,
     CURRENT,
     ACTIVE,
+    LOGGER,
 };
