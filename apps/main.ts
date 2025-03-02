@@ -1,11 +1,12 @@
 require('reflect-metadata');
-require('module-alias');
-require('./config/env/env.config')();
+require('module-alias/register');
+require('./config/env/env.config');
 
 import { database } from './datasource';
+import { errorHandler } from './middlewares/error-handler';
+import { v4 } from 'uuid';
 import slowDown from 'express-slow-down';
 import * as CONFIG from './config';
-import uuid from 'uuid';
 import express from 'express';
 import limiter from 'express-rate-limit';
 import cors from 'cors';
@@ -56,15 +57,16 @@ app.use(
         resave: false,
         saveUninitialized: true,
         cookie: { maxAge: 60 * 60 * 60 * 24 },
-        genid: () => uuid.v4(),
+        genid: () => v4(),
         store: new Store({
-            db: 'bucket',
-            dir: CONFIG.ACTIVE.DATABASE_URI,
+            db: CONFIG.ACTIVE.DATABASE,
+            dir: CONFIG.ACTIVE.DATABASE_DIR,
         }),
     })
 );
 
 app.use(routes);
+app.use(errorHandler);
 
 database
     .initialize()

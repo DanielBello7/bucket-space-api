@@ -1,0 +1,20 @@
+### GET ACCOUNTS
+GET http://localhost:3000/accounts/
+Accept: application/json
+Content-Type: application/json
+
+
+### FIND ACCOUNT
+GET http://localhost:3000/accounts/7671
+Accept: application/json
+Content-Type: application/json
+
+### CREATE ACCOUNT
+POST http://localhost:3000/accounts/signup/
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name": "johnson grimes",
+    "email": "johson@gmail.com"
+}

@@ -6,6 +6,8 @@ export const DEV_CONSTANT: CONSTANT = {
         __dirname,
         path.join('..', '..', '..', 'sqls', `bucket.dev.db`)
     ),
+    DATABASE: 'bucket.dev.db',
+    DATABASE_DIR: path.resolve(__dirname, '../../../sqls'),
     JWT_SECRET: 'secret',
     NODE_ENV: 'development',
     PORT: 3000,
