@@ -1,10 +1,16 @@
-import * as AccountControllers from './accounts.controller';
+import { parseBodyPipe } from '@/middlewares/pipes/parse-body-pipe.pipes';
 import { uuidParamPipe } from './pipes/uuid-params.pipe';
+import { CreateAccountDto } from './dto/create-account.dto';
 import express from 'express';
+import * as AccountControllers from './accounts.controller';
 
 const router = express.Router();
 
-router.post('/signup/', AccountControllers.createAccount);
+router.post(
+    '/signup/',
+    parseBodyPipe(CreateAccountDto),
+    AccountControllers.createAccount
+);
 
 router.patch('/:id/', AccountControllers.updateAccount);
 

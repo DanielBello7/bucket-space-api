@@ -5,7 +5,7 @@ export const database = new DataSource({
     type: 'sqlite',
     database: 'bucket',
     synchronize: true,
-    logging: true,
+    logging: false,
     entities: [Account],
     subscribers: [],
     migrations: [],

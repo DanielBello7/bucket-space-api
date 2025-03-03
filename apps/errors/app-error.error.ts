@@ -1,8 +1,8 @@
 import httpStatus from 'http-status';
 
-export class HttpError extends Error {
-    public status: number = httpStatus.INTERNAL_SERVER_ERROR;
-    public message: string;
+export class AppError extends Error {
+    public statusCode: number = httpStatus.INTERNAL_SERVER_ERROR;
+    public msg: string;
     public context: string;
     public title: string;
 
@@ -11,10 +11,9 @@ export class HttpError extends Error {
         ctx: string = 'error context'
     ) {
         super(msg);
+        this.msg = msg;
         this.context = ctx;
-        this.message = msg;
-        this.stack = ctx;
-        this.name = 'HttpError';
         this.title = 'HttpError';
+        Object.setPrototypeOf(this, AppError.prototype);
     }
 }

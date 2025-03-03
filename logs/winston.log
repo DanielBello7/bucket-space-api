@@ -65,3 +65,154 @@
 {"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:29:21"}
 {"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:29:23"}
 {"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:29:32"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:31:36"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:33:01"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:33:07"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:33:35"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:33:51"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:39:24"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:39:29"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:40:11"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:40:18"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:40:36"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:40:43"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:41:28"}
+{"level":"error","message":"Error occured:","timestamp":"2025-03-02 17:41:49"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:42:08"}
+{"level":"error","message":"Error occured:","timestamp":"2025-03-02 17:42:13"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:42:45"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:43:20"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:43:27"}
+{"level":"error","message":"Error occured:","timestamp":"2025-03-02 17:43:33"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:43:58"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:44:08"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:44:15"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:44:19"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:44:26"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:44:37"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:44:45"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:44:48"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:44:53"}
+{"level":"error","message":"Error occured:","timestamp":"2025-03-02 17:45:04"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:45:49"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:45:56"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:46:06"}
+{"level":"error","message":"Error occured:","timestamp":"2025-03-02 17:46:10"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:46:58"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:46:59"}
+{"level":"error","message":"Error occured: Internal Server Error, {\"statusCode\":400,\"msg\":\"id not valid UUID\",\"context\":\"error context\",\"title\":\"BadRequestError\"}","timestamp":"2025-03-02 17:47:06"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:48:12"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:48:22"}
+{"level":"error","message":"Error Occured, {\"statusCode\":400,\"msg\":\"id not valid UUID\",\"context\":\"error context\",\"title\":\"BadRequestError\"}","timestamp":"2025-03-02 17:48:25"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:48:55"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:49:06"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:50:00"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:50:14"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:50:17"}
+{"level":"error","message":"Error Occured, {\"statusCode\":400,\"msg\":\"Error here\",\"context\":\"error context\",\"title\":\"BadRequestError\"}","timestamp":"2025-03-02 17:50:21"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:50:48"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:50:52"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:54:22"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:56:04"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:56:05"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:56:33"}
+{"level":"error","message":"Error Prototype: Error","timestamp":"2025-03-02 17:56:37"}
+{"level":"error","message":"Expected Prototype: Error","timestamp":"2025-03-02 17:56:37"}
+{"level":"error","message":"Error Occured, {\"statusCode\":400,\"msg\":\"id not valid UUID\",\"context\":\"error context\",\"title\":\"BadRequestError\"}","timestamp":"2025-03-02 17:56:37"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:57:15"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:57:43"}
+{"level":"error","message":"Error Prototype: Error","timestamp":"2025-03-02 17:57:45"}
+{"level":"error","message":"Expected Prototype: Error","timestamp":"2025-03-02 17:57:45"}
+{"level":"error","message":"Error Occured, {\"statusCode\":400,\"msg\":\"id not valid UUID\",\"context\":\"error context\",\"title\":\"BadRequestError\"}","timestamp":"2025-03-02 17:57:45"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:58:15"}
+{"level":"error","message":"Error Prototype: Error","timestamp":"2025-03-02 17:58:31"}
+{"level":"error","message":"Expected Prototype: Error","timestamp":"2025-03-02 17:58:31"}
+{"level":"error","message":"id not valid UUID, {\"statusCode\":400,\"msg\":\"id not valid UUID\",\"context\":\"error context\",\"title\":\"BadRequestError\"}","timestamp":"2025-03-02 17:58:31"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:58:40"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 17:58:51"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:07:06"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:07:17"}
+{"level":"error","message":"Error Occured, {\"expose\":true,\"statusCode\":400,\"status\":400,\"body\":\"{\\n    \\\"name\\\": \\\"johnson grimes\\\",\\n}\",\"type\":\"entity.parse.failed\"}","timestamp":"2025-03-02 18:07:25"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:19:19"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:19:48"}
+{"level":"error","message":"Error Occured, {\"expose\":true,\"statusCode\":400,\"status\":400,\"body\":\"{\\n    \\\"name\\\": \\\"johnson grimes\\\",\\n}\",\"type\":\"entity.parse.failed\"}","timestamp":"2025-03-02 18:20:04"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:20:23"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:20:33"}
+{"level":"error","message":"Error Occured, {\"expose\":true,\"statusCode\":400,\"status\":400,\"body\":\"{\\n    \\\"name\\\": \\\"johnson grimes\\\",\\n}\",\"type\":\"entity.parse.failed\"}","timestamp":"2025-03-02 18:20:38"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:27:01"}
+{"level":"error","message":"Error Occured, {\"expose\":true,\"statusCode\":400,\"status\":400,\"body\":\"{\\n    \\\"name\\\": \\\"johnson grimes\\\",\\n}\",\"type\":\"entity.parse.failed\"}","timestamp":"2025-03-02 18:27:05"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:33:08"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:33:09"}
+{"level":"error","message":"Error Occured, {\"expose\":true,\"statusCode\":400,\"status\":400,\"body\":\"{\\n    \\\"name\\\": \\\"johnson grimes\\\",\\n}\",\"type\":\"entity.parse.failed\"}","timestamp":"2025-03-02 18:33:39"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:34:01"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:34:08"}
+{"level":"error","message":"Error Occured, {\"expose\":true,\"statusCode\":400,\"status\":400,\"body\":\"{\\n    \\\"name\\\": \\\"johnson grimes\\\",\\n}\",\"type\":\"entity.parse.failed\"}","timestamp":"2025-03-02 18:34:11"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:39:19"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:39:59"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:40:05"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:40:07"}
+{"level":"error","message":"Error Occured, {\"expose\":true,\"statusCode\":400,\"status\":400,\"body\":\"{\\n    \\\"name\\\": \\\"johnson grimes\\\",\\n}\",\"type\":\"entity.parse.failed\"}","timestamp":"2025-03-02 18:40:11"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:42:01"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:42:09"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:42:13"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:42:17"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:42:36"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:42:51"}
+{"level":"error","message":"Error Occured, {\"expose\":true,\"statusCode\":400,\"status\":400,\"body\":\"{\\n    \\\"name\\\": \\\"johnson grimes\\\",\\n}\",\"type\":\"entity.parse.failed\"}","timestamp":"2025-03-02 18:42:56"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:43:19"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:43:50"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:44:58"}
+{"level":"error","message":"Error Occured, {\"expose\":true,\"statusCode\":400,\"status\":400,\"body\":\"{\\n    \\\"name\\\": \\\"johnson grimes\\\",\\n}\",\"type\":\"entity.parse.failed\"}","timestamp":"2025-03-02 18:44:59"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:45:10"}
+{"level":"error","message":"Error Occured, {\"expose\":true,\"statusCode\":400,\"status\":400,\"body\":\"{\\n    \\\"name\\\": \\\"johnson grimes\\\",\\n}\",\"type\":\"entity.parse.failed\"}","timestamp":"2025-03-02 18:45:12"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:45:42"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:45:50"}
+{"level":"error","message":"Error Occured, {\"expose\":true,\"statusCode\":400,\"status\":400,\"body\":\"{\\n    \\\"name\\\": \\\"johnson grimes\\\",\\n}\",\"type\":\"entity.parse.failed\"}","timestamp":"2025-03-02 18:45:53"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:46:21"}
+{"level":"error","message":"Error Occured, {\"expose\":true,\"statusCode\":400,\"status\":400,\"body\":\"{\\n    \\\"name\\\": \\\"johnson grimes\\\",\\n}\",\"type\":\"entity.parse.failed\"}","timestamp":"2025-03-02 18:46:26"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:46:42"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:46:47"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:47:35"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:47:42"}
+{"level":"error","message":"name, email, {\"statusCode\":400,\"msg\":\"name, email\",\"context\":\"error context\",\"title\":\"BadRequestError\"}","timestamp":"2025-03-02 18:47:46"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:48:00"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:48:32"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:48:51"}
+{"level":"error","message":"An instance of CreateAccountDto has failed the validation:\n - property name has failed the following constraints: minLength, isString, isNotEmpty \n, An instance of CreateAccountDto has failed the validation:\n - property email has failed the following constraints: minLength, isEmail, isString, isNotEmpty \n, {\"statusCode\":400,\"msg\":\"An instance of CreateAccountDto has failed the validation:\\n - property name has failed the following constraints: minLength, isString, isNotEmpty \\n, An instance of CreateAccountDto has failed the validation:\\n - property email has failed the following constraints: minLength, isEmail, isString, isNotEmpty \\n\",\"context\":\"error context\",\"title\":\"BadRequestError\"}","timestamp":"2025-03-02 18:48:53"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:53:07"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:53:09"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:53:10"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:53:34"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:55:00"}
+{"level":"error","message":"Error occured during function CreateAccountDto() {\n    } validation, {\"statusCode\":400,\"msg\":\"Error occured during function CreateAccountDto() {\\n    } validation\",\"context\":\"error context\",\"title\":\"ValidationError\",\"errors\":[{\"target\":{},\"property\":\"name\",\"children\":[],\"constraints\":{\"minLength\":\"name must be longer than or equal to 3 characters\",\"isString\":\"name must be a string\",\"isNotEmpty\":\"name should not be empty\"}},{\"target\":{},\"property\":\"email\",\"children\":[],\"constraints\":{\"minLength\":\"email must be longer than or equal to 3 characters\",\"isEmail\":\"email must be an email\",\"isString\":\"email must be a string\",\"isNotEmpty\":\"email should not be empty\"}}]}","timestamp":"2025-03-02 18:55:03"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:55:54"}
+{"level":"error","message":"Error occured during function CreateAccountDto() {\n    } validation, {\"statusCode\":400,\"msg\":\"Error occured during function CreateAccountDto() {\\n    } validation\",\"context\":\"error context\",\"title\":\"ValidationError\",\"errors\":[{\"target\":{},\"property\":\"name\",\"children\":[],\"constraints\":{\"minLength\":\"name must be longer than or equal to 3 characters\",\"isString\":\"name must be a string\",\"isNotEmpty\":\"name should not be empty\"}},{\"target\":{},\"property\":\"email\",\"children\":[],\"constraints\":{\"minLength\":\"email must be longer than or equal to 3 characters\",\"isEmail\":\"email must be an email\",\"isString\":\"email must be a string\",\"isNotEmpty\":\"email should not be empty\"}}]}","timestamp":"2025-03-02 18:55:56"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 18:56:24"}
+{"level":"error","message":"Error occured during function CreateAccountDto() {\n    } validation, {\"statusCode\":400,\"msg\":\"Error occured during function CreateAccountDto() {\\n    } validation\",\"context\":\"error context\",\"title\":\"ValidationError\",\"errors\":[{\"target\":{},\"property\":\"name\",\"children\":[],\"constraints\":{\"minLength\":\"name must be longer than or equal to 3 characters\",\"isString\":\"name must be a string\",\"isNotEmpty\":\"name should not be empty\"}},{\"target\":{},\"property\":\"email\",\"children\":[],\"constraints\":{\"minLength\":\"email must be longer than or equal to 3 characters\",\"isEmail\":\"email must be an email\",\"isString\":\"email must be a string\",\"isNotEmpty\":\"email should not be empty\"}}]}","timestamp":"2025-03-02 18:56:26"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 19:05:20"}
+{"level":"error","message":"Error occured during function CreateAccountDto() {\n    } validation, {\"statusCode\":400,\"msg\":\"Error occured during function CreateAccountDto() {\\n    } validation\",\"context\":\"error context\",\"title\":\"ValidationError\",\"errors\":[{\"target\":{},\"property\":\"name\",\"children\":[],\"constraints\":{\"minLength\":\"name must be longer than or equal to 3 characters\",\"isString\":\"name must be a string\",\"isNotEmpty\":\"name should not be empty\"}},{\"target\":{},\"property\":\"email\",\"children\":[],\"constraints\":{\"minLength\":\"email must be longer than or equal to 3 characters\",\"isEmail\":\"email must be an email\",\"isString\":\"email must be a string\",\"isNotEmpty\":\"email should not be empty\"}}]}","timestamp":"2025-03-02 19:06:06"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 19:07:12"}
+{"level":"error","message":"Error occured during function CreateAccountDto() {\n    } validation, {\"statusCode\":400,\"msg\":\"Error occured during function CreateAccountDto() {\\n    } validation\",\"context\":\"error context\",\"title\":\"ValidationError\",\"errors\":[{\"target\":{},\"property\":\"name\",\"children\":[],\"constraints\":{\"minLength\":\"name must be longer than or equal to 3 characters\",\"isString\":\"name must be a string\",\"isNotEmpty\":\"name should not be empty\"}},{\"target\":{},\"property\":\"email\",\"children\":[],\"constraints\":{\"minLength\":\"email must be longer than or equal to 3 characters\",\"isEmail\":\"email must be an email\",\"isString\":\"email must be a string\",\"isNotEmpty\":\"email should not be empty\"}}]}","timestamp":"2025-03-02 19:07:15"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 19:07:27"}
+{"level":"error","message":"Error occured during function CreateAccountDto() {\n    } validation, {\"statusCode\":400,\"msg\":\"Error occured during function CreateAccountDto() {\\n    } validation\",\"context\":\"error context\",\"title\":\"ValidationError\",\"errors\":[{\"target\":{},\"property\":\"name\",\"children\":[],\"constraints\":{\"minLength\":\"name must be longer than or equal to 3 characters\",\"isString\":\"name must be a string\",\"isNotEmpty\":\"name should not be empty\"}},{\"target\":{},\"property\":\"email\",\"children\":[],\"constraints\":{\"minLength\":\"email must be longer than or equal to 3 characters\",\"isEmail\":\"email must be an email\",\"isString\":\"email must be a string\",\"isNotEmpty\":\"email should not be empty\"}}]}","timestamp":"2025-03-02 19:07:29"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 19:07:36"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 19:07:55"}
+{"level":"error","message":"Error occured during function CreateAccountDto() {\n    } validation, {\"statusCode\":400,\"msg\":\"Error occured during function CreateAccountDto() {\\n    } validation\",\"context\":\"error context\",\"title\":\"ValidationError\",\"errors\":[{\"target\":{},\"property\":\"name\",\"children\":[],\"constraints\":{\"minLength\":\"name must be longer than or equal to 3 characters\",\"isString\":\"name must be a string\",\"isNotEmpty\":\"name should not be empty\"}},{\"target\":{},\"property\":\"email\",\"children\":[],\"constraints\":{\"minLength\":\"email must be longer than or equal to 3 characters\",\"isEmail\":\"email must be an email\",\"isString\":\"email must be a string\",\"isNotEmpty\":\"email should not be empty\"}}]}","timestamp":"2025-03-02 19:07:57"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 19:10:03"}
+{"level":"error","message":"Error occured during function CreateAccountDto() {\n    } validation, {\"statusCode\":400,\"msg\":\"Error occured during function CreateAccountDto() {\\n    } validation\",\"context\":\"error context\",\"title\":\"ValidationError\",\"errors\":[{\"target\":{},\"property\":\"name\",\"children\":[],\"constraints\":{\"minLength\":\"name must be longer than or equal to 3 characters\",\"isString\":\"name must be a string\",\"isNotEmpty\":\"name should not be empty\"}},{\"target\":{},\"property\":\"email\",\"children\":[],\"constraints\":{\"minLength\":\"email must be longer than or equal to 3 characters\",\"isEmail\":\"email must be an email\",\"isString\":\"email must be a string\",\"isNotEmpty\":\"email should not be empty\"}}]}","timestamp":"2025-03-02 19:10:33"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 19:11:44"}
+{"level":"error","message":"Error occured during function CreateAccountDto() {\n    } validation, {\"statusCode\":400,\"msg\":\"Error occured during function CreateAccountDto() {\\n    } validation\",\"context\":\"error context\",\"title\":\"ValidationError\",\"errors\":[{\"target\":{},\"property\":\"name\",\"children\":[],\"constraints\":{\"minLength\":\"name must be longer than or equal to 3 characters\",\"isString\":\"name must be a string\",\"isNotEmpty\":\"name should not be empty\"}},{\"target\":{},\"property\":\"email\",\"children\":[],\"constraints\":{\"minLength\":\"email must be longer than or equal to 3 characters\",\"isEmail\":\"email must be an email\",\"isString\":\"email must be a string\",\"isNotEmpty\":\"email should not be empty\"}}]}","timestamp":"2025-03-02 19:11:50"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 19:12:50"}
+{"level":"error","message":"Error occured during function CreateAccountDto() {\n    } validation, {\"statusCode\":400,\"msg\":\"Error occured during function CreateAccountDto() {\\n    } validation\",\"context\":\"error context\",\"title\":\"ValidationError\",\"errors\":[{\"target\":{},\"property\":\"name\",\"children\":[],\"constraints\":{\"minLength\":\"name must be longer than or equal to 3 characters\",\"isString\":\"name must be a string\",\"isNotEmpty\":\"name should not be empty\"}},{\"target\":{},\"property\":\"email\",\"children\":[],\"constraints\":{\"minLength\":\"email must be longer than or equal to 3 characters\",\"isEmail\":\"email must be an email\",\"isString\":\"email must be a string\",\"isNotEmpty\":\"email should not be empty\"}}]}","timestamp":"2025-03-02 19:12:53"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 19:15:48"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 19:15:57"}
+{"level":"error","message":"Error occured during function CreateAccountDto() {\n    } validation, {\"statusCode\":400,\"msg\":\"Error occured during function CreateAccountDto() {\\n    } validation\",\"context\":\"error context\",\"title\":\"ValidationError\",\"errors\":[{\"target\":{},\"property\":\"name\",\"children\":[],\"constraints\":{\"minLength\":\"name must be longer than or equal to 3 characters\",\"isString\":\"name must be a string\",\"isNotEmpty\":\"name should not be empty\"}},{\"target\":{},\"property\":\"email\",\"children\":[],\"constraints\":{\"minLength\":\"email must be longer than or equal to 3 characters\",\"isEmail\":\"email must be an email\",\"isString\":\"email must be a string\",\"isNotEmpty\":\"email should not be empty\"}}]}","timestamp":"2025-03-02 19:16:01"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 19:16:41"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 19:16:47"}
+{"level":"error","message":"Error occured during function CreateAccountDto() {\n    } validation, {\"statusCode\":400,\"msg\":\"Error occured during function CreateAccountDto() {\\n    } validation\",\"context\":\"error context\",\"title\":\"ValidationError\",\"errors\":[{\"target\":{\"name\":\"daniel bello\"},\"property\":\"email\",\"children\":[],\"constraints\":{\"minLength\":\"email must be longer than or equal to 3 characters\",\"isEmail\":\"email must be an email\",\"isString\":\"email must be a string\",\"isNotEmpty\":\"email should not be empty\"}}]}","timestamp":"2025-03-02 19:16:49"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 19:18:39"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 19:19:15"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 19:19:46"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 19:20:19"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 19:20:37"}
+{"level":"error","message":"Error occured during CreateAccountDto validation, {\"statusCode\":400,\"msg\":\"Error occured during CreateAccountDto validation\",\"context\":\"error context\",\"title\":\"ValidationError\",\"errors\":[{\"target\":{\"name\":\"daniel bello\"},\"property\":\"email\",\"children\":[],\"constraints\":{\"minLength\":\"email must be longer than or equal to 3 characters\",\"isEmail\":\"email must be an email\",\"isString\":\"email must be a string\",\"isNotEmpty\":\"email should not be empty\"}}]}","timestamp":"2025-03-02 19:20:39"}

@@ -1,6 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import { logger } from '@/config/logger/winston.logger';
-import { HttpError } from '@/errors/http-error.error';
+import { AppError } from '@/errors/app-error.error';
+import { ValidationError } from '@/errors/validation-error.error';
 
 export const errorHandler = (
     error: unknown,
@@ -10,14 +11,25 @@ export const errorHandler = (
 ) => {
     let statusCode: number;
     let msg: string;
+    let title: string;
+    let errors: string[] = [];
 
-    if (error instanceof HttpError) {
-        msg = error.message;
-        statusCode = error.status;
+    if (error instanceof ValidationError) {
+        msg = error.msg;
+        statusCode = error.statusCode;
+        title = error.title;
+        errors = error.errors.flatMap((error) =>
+            Object.values(error.constraints ?? {})
+        );
+    } else if (error instanceof AppError) {
+        msg = error.msg;
+        statusCode = error.statusCode;
+        title = error.title;
     } else {
-        msg = 'Internal Error';
+        title = 'Internal Server Error';
+        msg = 'Error Occured';
         statusCode = 500;
     }
-    logger.error('Error occured:', msg, error);
-    res.status(statusCode).json({ msg, status: statusCode });
+    logger.error(`${msg}, ${JSON.stringify(error)}`);
+    res.status(statusCode).json({ title, msg, status: statusCode, errors });
 };
