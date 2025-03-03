@@ -30,6 +30,6 @@ export const errorHandler = (
         msg = 'Error Occured';
         statusCode = 500;
     }
-    logger.error(`${msg}, ${JSON.stringify(error)}`);
+    logger.error(`${title}, ${msg}`);
     res.status(statusCode).json({ title, msg, status: statusCode, errors });
 };

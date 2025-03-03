@@ -38,8 +38,9 @@ export class Account {
     }
 
     @BeforeInsert()
-    set_timestamps() {
+    set_defaults() {
         this.createdAt = new Date();
         this.updatedAt = new Date();
+        this.isVerified = false;
     }
 }
