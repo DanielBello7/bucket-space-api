@@ -4,7 +4,7 @@ import { AccountService } from './accounts.service';
 export class AccountController {
     constructor(private readonly accounts: AccountService) {}
 
-    findAccount = async (req: Request, res: Response, next: NextFunction) => {
+    find = async (req: Request, res: Response, next: NextFunction) => {
         try {
             const id = req.params.id;
             const response = await this.accounts.findById(id);
@@ -14,7 +14,7 @@ export class AccountController {
         }
     };
 
-    createAccount = async (req: Request, res: Response, next: NextFunction) => {
+    create = async (req: Request, res: Response, next: NextFunction) => {
         try {
             const response = await this.accounts.register(req.body);
             res.json(response);
@@ -23,7 +23,7 @@ export class AccountController {
         }
     };
 
-    getAccounts = async (req: Request, res: Response, next: NextFunction) => {
+    get = async (req: Request, res: Response, next: NextFunction) => {
         try {
             const query = req.query;
             const response = await this.accounts.get(query);
@@ -33,7 +33,7 @@ export class AccountController {
         }
     };
 
-    updateAccount = async (req: Request, res: Response, next: NextFunction) => {
+    update = async (req: Request, res: Response, next: NextFunction) => {
         try {
             const body = req.body;
             const id = req.params.id;
@@ -44,7 +44,7 @@ export class AccountController {
         }
     };
 
-    deleteAccount = async (req: Request, res: Response, next: NextFunction) => {
+    remove = async (req: Request, res: Response, next: NextFunction) => {
         try {
             const id = req.params.id;
             const response = await this.accounts.remove(id);

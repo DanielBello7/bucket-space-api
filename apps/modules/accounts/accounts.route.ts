@@ -12,18 +12,14 @@ const repo = database.getRepository<Account>(Account);
 const service = new AccountService(repo);
 const controller = new AccountController(service);
 
-router.post(
-    '/signup/',
-    parseBodyPipe(CreateAccountDto),
-    controller.createAccount
-);
+router.post('/signup/', parseBodyPipe(CreateAccountDto), controller.create);
 
-router.patch('/:id/', uuidParamPipe('id'), controller.updateAccount);
+router.patch('/:id/', uuidParamPipe('id'), controller.update);
 
-router.get('/', controller.getAccounts);
+router.get('/', controller.get);
 
-router.get('/:id/', uuidParamPipe('id'), controller.findAccount);
+router.get('/:id/', uuidParamPipe('id'), controller.find);
 
-router.delete('/:id/', uuidParamPipe('id'), controller.deleteAccount);
+router.delete('/:id/', uuidParamPipe('id'), controller.remove);
 
 export default router;

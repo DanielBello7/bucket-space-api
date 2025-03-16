@@ -243,3 +243,20 @@
 {"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 19:35:44"}
 {"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 19:35:48"}
 {"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 19:35:52"}
+{"level":"error","message":"NotFoundError, The requested resource was not found","timestamp":"2025-03-02 19:36:21"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 19:37:50"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 19:37:55"}
+{"level":"error","message":"NotFoundError, The requested resource was not found","timestamp":"2025-03-02 19:38:11"}
+{"level":"error","message":"BadRequestError, id not valid UUID","timestamp":"2025-03-02 19:38:24"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 19:38:49"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 19:38:52"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 19:38:56"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 19:38:59"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 19:39:03"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 19:39:09"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-02 19:39:39"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-16 13:49:33"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-16 13:49:52"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-16 13:50:05"}
+{"level":"error","message":"BadRequestError, id not valid UUID","timestamp":"2025-03-16 13:50:53"}
+{"level":"error","message":"ValidationError, Error occured during CreateAccountDto validation","timestamp":"2025-03-16 13:50:59"}
