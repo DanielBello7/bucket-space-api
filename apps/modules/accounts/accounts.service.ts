@@ -8,11 +8,13 @@ import { Repository } from 'typeorm';
 export class AccountService {
     constructor(private readonly accounts: Repository<Account>) {}
 
-    async get(query?: Record<string, any>) {
-        return this.accounts.find();
+    async get(query: Record<string, any> = {}) {
+        return this.accounts.find({
+            where: query,
+        });
     }
 
-    async isRegistered(email: string): Promise<boolean> {
+    async isUsed(email: string): Promise<boolean> {
         const response = await this.accounts.findOne({
             where: {
                 email,
@@ -23,7 +25,7 @@ export class AccountService {
     }
 
     async register(body: CreateAccountDto) {
-        if (await this.isRegistered(body.email)) {
+        if (await this.isUsed(body.email)) {
             throw new BadRequestError('Email already registered');
         }
         return this.create(body);

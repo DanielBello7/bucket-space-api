@@ -1,0 +1,5 @@
+export enum SHARE_ENUM {
+    FOLLOWERS = 'FOLLOWERS',
+    FOLLOWING = 'FOLLOWING',
+    BOTH = 'BOTH',
+}

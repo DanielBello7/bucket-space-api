@@ -10,8 +10,6 @@ const CURRENT = {
 };
 const ACTIVE = CURRENT[EXT];
 
-console.log(ACTIVE);
-
 export {
     ENV,
     EXT,
