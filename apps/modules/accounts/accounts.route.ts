@@ -1,25 +1,24 @@
+import express from 'express';
 import { parseBodyPipe } from '@/middlewares/pipes/parse-body-pipe.pipes';
 import { uuidParamPipe } from './pipes/uuid-params.pipe';
 import { CreateAccountDto } from './dto/create-account.dto';
-import { database } from '@/datasource';
-import { AccountController } from './accounts.controller';
-import { Account } from './entities/account.entity';
-import { AccountService } from './accounts.service';
-import express from 'express';
+import { AccountModule } from './accounts.module';
 
 const router = express.Router();
-const repo = database.getRepository<Account>(Account);
-const service = new AccountService(repo);
-const controller = new AccountController(service);
+const module = new AccountModule();
 
-router.post('/signup/', parseBodyPipe(CreateAccountDto), controller.create);
+router.post(
+    '/signup/',
+    parseBodyPipe(CreateAccountDto),
+    module.controller.create
+);
 
-router.patch('/:id/', uuidParamPipe('id'), controller.update);
+router.patch('/:id/', uuidParamPipe('id'), module.controller.update);
 
-router.get('/', controller.get);
+router.get('/', module.controller.get);
 
-router.get('/:id/', uuidParamPipe('id'), controller.find);
+router.get('/:id/', uuidParamPipe('id'), module.controller.find);
 
-router.delete('/:id/', uuidParamPipe('id'), controller.remove);
+router.delete('/:id/', uuidParamPipe('id'), module.controller.remove);
 
 export default router;
