@@ -6,18 +6,18 @@ const router = express.Router();
 
 const module = new RelationshipModule(database);
 
-router.get('/user/:id/following/');
+router.get('/user/:id/following/', module.controller.getUserFollowing);
 
-router.get('user/:id/followers/');
+router.get('/user/:id/followers/', module.controller.getUserFollowers);
 
-router.delete('/unfollow/');
+router.delete('/unfollow/', module.controller.unfollowAccount);
 
-router.get('/user/:id/following/count/');
+router.get('/user/:id/following/count/', module.controller.numUserFollowing);
 
-router.get('/users/:id/followers/count/');
+router.get('/users/:id/followers/count/', module.controller.numUserFollowers);
 
-router.post('/follow/');
+router.post('/follow/', module.controller.followAccount);
 
-router.get('/:id/counterpart/');
+router.get('/:id/counterpart/', module.controller.findCounterPart);
 
 export default router;
