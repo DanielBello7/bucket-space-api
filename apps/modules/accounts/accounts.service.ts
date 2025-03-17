@@ -53,7 +53,8 @@ export class AccountService {
     }
 
     async update(id: string, body: UpdateAccountDto) {
-        return this.accounts.update(id, body);
+        await this.accounts.update(id, body);
+        return this.findById(id);
     }
 
     async findById(id: string) {
@@ -69,7 +70,9 @@ export class AccountService {
     }
 
     async remove(id: string) {
-        return this.accounts.delete(id);
+        const response = await this.findById(id);
+        await this.accounts.delete(id);
+        return response;
     }
 
     async create(body: CreateAccountDto) {
