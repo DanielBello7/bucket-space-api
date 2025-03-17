@@ -7,9 +7,11 @@ import {
     ManyToOne,
     Entity,
 } from 'typeorm';
+import { Likes } from '../types/like.type';
+import { Post } from '@/modules/posts/entities/post.entity';
 
 @Entity()
-export class Like {
+export class Like implements Likes {
     @PrimaryGeneratedColumn('uuid')
     id!: string;
     @Column({ type: 'varchar', length: 255 })
@@ -22,6 +24,8 @@ export class Like {
     updatedAt!: Date;
     @ManyToOne(() => Account, (account) => account.Likes)
     Account!: Account;
+    @ManyToOne(() => Post, (post) => post.Likes)
+    Post!: Post;
 
     @BeforeUpdate()
     updated() {

@@ -7,9 +7,10 @@ import {
     ManyToOne,
     PrimaryGeneratedColumn,
 } from 'typeorm';
+import { Relationship as RelationshipType } from '../types/relationship.type';
 
 @Entity()
-export class Relationship {
+export class Relationship implements RelationshipType {
     @PrimaryGeneratedColumn('uuid')
     id!: string;
     @Column({ type: 'varchar', length: 255 })

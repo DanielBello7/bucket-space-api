@@ -9,9 +9,12 @@ import {
     OneToMany,
     PrimaryGeneratedColumn,
 } from 'typeorm';
+import { Post as PostType } from '../types/post.type';
+import { Like } from '@/modules/likes/entities/like.entity';
+import { Share } from '@/modules/shares/entities/share.entity';
 
 @Entity()
-export class Post {
+export class Post implements PostType {
     @PrimaryGeneratedColumn('uuid')
     id!: string;
     @Column({ type: 'varchar', length: 1000 })
@@ -19,9 +22,9 @@ export class Post {
     @Column({ type: 'varchar', length: 1000 })
     account!: string;
     @Column({ type: 'varchar', length: 1000 })
-    media: string | undefined;
+    media!: string | undefined;
     @Column({ type: 'varchar', length: 1000 })
-    mimetype: string | undefined;
+    mimetype!: string | undefined;
     @Column({ type: 'date' })
     createdAt!: Date;
     @Column({ type: 'date' })
@@ -30,6 +33,10 @@ export class Post {
     Account!: Account;
     @OneToMany(() => Comment, (comment) => comment.post)
     Comments!: Comment[];
+    @OneToMany(() => Like, (like) => like.post)
+    Likes!: Like[];
+    @OneToMany(() => Share, (share) => share.post)
+    Shares!: Share[];
 
     @BeforeUpdate()
     updated() {
@@ -41,5 +48,7 @@ export class Post {
         this.createdAt = new Date();
         this.updatedAt = new Date();
         this.Comments = [];
+        this.Likes = [];
+        this.Shares = [];
     }
 }
