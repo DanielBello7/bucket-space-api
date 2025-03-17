@@ -8,12 +8,7 @@ import { Repository } from 'typeorm';
 export class AccountService {
     constructor(private readonly accounts: Repository<Account>) {}
 
-    async get(query: Record<string, any> = {}) {
-        return this.accounts.find({
-            where: query,
-        });
-    }
-
+    /** this checks if the email is used */
     async isUsed(email: string): Promise<boolean> {
         const response = await this.accounts.findOne({
             where: {
@@ -24,11 +19,37 @@ export class AccountService {
         return true;
     }
 
+    /** this registers an account */
     async register(body: CreateAccountDto) {
         if (await this.isUsed(body.email)) {
             throw new BadRequestError('Email already registered');
         }
         return this.create(body);
+    }
+
+    /** this updates an account excluding important fields */
+    async modify(id: string, body: UpdateAccountDto) {
+        const { email, ...rest } = body;
+        return this.update(id, rest);
+    }
+
+    /** returns an account using the email as a query */
+    async findByEmail(email: string) {
+        const response = await this.accounts.findOne({
+            where: {
+                email,
+            },
+        });
+        if (!response) {
+            throw new NotFoundError('email not registered');
+        }
+        return response;
+    }
+
+    async get(query: Record<string, any> = {}) {
+        return this.accounts.find({
+            where: query,
+        });
     }
 
     async update(id: string, body: UpdateAccountDto) {
@@ -45,11 +66,6 @@ export class AccountService {
             throw new NotFoundError();
         }
         return response;
-    }
-
-    async modify(id: string, body: UpdateAccountDto) {
-        const { email, ...rest } = body;
-        return this.update(id, rest);
     }
 
     async remove(id: string) {
