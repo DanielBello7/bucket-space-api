@@ -3,9 +3,10 @@ import { parseBodyPipe } from '@/middlewares/pipes/parse-body-pipe.pipes';
 import { uuidParamPipe } from './pipes/uuid-params.pipe';
 import { CreateAccountDto } from './dto/create-account.dto';
 import { AccountModule } from './accounts.module';
+import { database } from '@/datasource';
 
 const router = express.Router();
-const module = new AccountModule();
+const module = new AccountModule(database);
 
 router.post(
     '/signup/',

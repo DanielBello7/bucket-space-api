@@ -1,10 +1,12 @@
 import { Account } from '@/modules/accounts/entities/account.entity';
+import { Comment } from '@/modules/comments/entities/comment.entity';
 import {
     BeforeInsert,
     BeforeUpdate,
     Column,
     Entity,
     ManyToOne,
+    OneToMany,
     PrimaryGeneratedColumn,
 } from 'typeorm';
 
@@ -26,6 +28,8 @@ export class Post {
     updatedAt!: Date;
     @ManyToOne(() => Account, (account) => account.Posts)
     Account!: Account;
+    @OneToMany(() => Comment, (comment) => comment.post)
+    Comments!: Comment[];
 
     @BeforeUpdate()
     updated() {
@@ -36,5 +40,6 @@ export class Post {
     defaults() {
         this.createdAt = new Date();
         this.updatedAt = new Date();
+        this.Comments = [];
     }
 }

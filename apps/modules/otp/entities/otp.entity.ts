@@ -6,9 +6,10 @@ import {
     Entity,
     PrimaryGeneratedColumn,
 } from 'typeorm';
+import { Otp as OtpType } from '../types/otp.type';
 
 @Entity()
-export class Otp {
+export class Otp implements OtpType {
     @PrimaryGeneratedColumn('uuid')
     id!: string;
     @Column({ type: 'varchar', length: 255 })

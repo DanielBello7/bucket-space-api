@@ -12,9 +12,10 @@ import {
     OneToMany,
     PrimaryGeneratedColumn,
 } from 'typeorm';
+import { Account as AccountType } from '../types/accounts.type';
 
 @Entity()
-export class Account {
+export class Account implements AccountType {
     @PrimaryGeneratedColumn('uuid')
     id!: string;
     @Column({ type: 'varchar', length: 255 })

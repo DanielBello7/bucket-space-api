@@ -7,9 +7,10 @@ import {
     ManyToOne,
     PrimaryGeneratedColumn,
 } from 'typeorm';
+import { Files as FileType } from '../types/files.types';
 
 @Entity()
-export class File {
+export class File implements FileType {
     @PrimaryGeneratedColumn('uuid')
     id!: string;
     @Column({ type: 'varchar', length: 255 })

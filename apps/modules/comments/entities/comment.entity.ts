@@ -7,11 +7,15 @@ import {
     ManyToOne,
     PrimaryGeneratedColumn,
 } from 'typeorm';
+import { Comments as CommentType } from '../types/comments.type';
+import { Post } from '@/modules/posts/entities/post.entity';
 
 @Entity()
-export class Comment {
+export class Comment implements CommentType {
     @PrimaryGeneratedColumn('uuid')
     id!: string;
+    @Column({ type: 'varchar', length: 255 })
+    post!: string;
     @Column({ type: 'varchar', length: 1000 })
     body!: string;
     @Column({ type: 'varchar', length: 255 })
@@ -22,6 +26,8 @@ export class Comment {
     updatedAt!: Date;
     @ManyToOne(() => Account, (account) => account.Comments)
     Account!: Account;
+    @ManyToOne(() => Post, (post) => post.Comments)
+    Post!: Post;
 
     @BeforeUpdate()
     updated() {
