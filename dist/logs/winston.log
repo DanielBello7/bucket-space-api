@@ -1,0 +1,14 @@
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-16 14:16:07"}
+{"level":"error","message":"BadRequestError, id not valid UUID","timestamp":"2025-03-16 14:17:47"}
+{"level":"error","message":"ValidationError, Error occured during CreateAccountDto validation","timestamp":"2025-03-16 14:17:49"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-16 14:24:33"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-16 14:25:33"}
+{"level":"error","message":"BadRequestError, id not valid UUID","timestamp":"2025-03-16 14:25:50"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-16 14:26:26"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-16 14:26:35"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-16 14:27:08"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-16 14:27:31"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-16 14:28:03"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-16 14:30:07"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-16 14:31:03"}
+{"level":"error","message":"BadRequestError, id not valid UUID","timestamp":"2025-03-16 14:31:14"}
