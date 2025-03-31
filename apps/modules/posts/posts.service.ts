@@ -67,9 +67,10 @@ export class PostService {
 	async save(body: CreatePostDto, files: Express.Multer.File[]) {
 		if (files.length > 0) {
 			const response = await this.files.upload(body.account, files);
-			body.media = response.map((item) => item.title);
+			body.media = response.map((item) => item.url);
 			body.mimetype = response.map((item) => item.mimetype);
 		}
+		console.log("------body", body);
 		return this.create(body);
 	}
 

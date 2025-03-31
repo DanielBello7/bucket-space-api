@@ -63,7 +63,5 @@ export class Post implements PostType {
 		this.Comments = [];
 		this.Likes = [];
 		this.Shares = [];
-		this.media = [];
-		this.mimetype = [];
 	}
 }
