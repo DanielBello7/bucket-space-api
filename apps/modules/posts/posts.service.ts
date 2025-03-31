@@ -3,7 +3,6 @@ import { Post } from "./entities/post.entity";
 import { CreatePostDto } from "./dto/create-post.dto";
 import { UpdatePostDto } from "./dto/update-post.dto";
 import { NotFoundError } from "@/errors/not-found-error.error";
-import { StorageService } from "@/libs/storage/storage.service";
 import { FileService } from "../files";
 
 export class PostService {
@@ -68,9 +67,9 @@ export class PostService {
 	async save(body: CreatePostDto, files: Express.Multer.File[]) {
 		if (files.length > 0) {
 			const response = await this.files.upload(body.account, files);
-			console.log("-----", response);
+			body.media = response.map((item) => item.title);
+			body.mimetype = response.map((item) => item.mimetype);
 		}
-		throw new Error("mistake");
 		return this.create(body);
 	}
 

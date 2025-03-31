@@ -26,11 +26,11 @@ export class Post implements PostType {
 	@Column({ type: "varchar" })
 	account!: string;
 
-	@Column({ type: "varchar", length: 1000, nullable: true })
-	media!: string | undefined;
+	@Column({ type: "simple-json", length: 1000, nullable: true })
+	media!: string[];
 
-	@Column({ type: "varchar", length: 1000, nullable: true })
-	mimetype!: string | undefined;
+	@Column({ type: "simple-json", length: 1000, nullable: true })
+	mimetype!: string[];
 
 	@Column({ type: "date" })
 	createdAt!: Date;
@@ -63,5 +63,7 @@ export class Post implements PostType {
 		this.Comments = [];
 		this.Likes = [];
 		this.Shares = [];
+		this.media = [];
+		this.mimetype = [];
 	}
 }
