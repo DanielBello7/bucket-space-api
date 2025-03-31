@@ -4,11 +4,12 @@ import { CreatePostDto } from "./dto/create-post.dto";
 import { UpdatePostDto } from "./dto/update-post.dto";
 import { NotFoundError } from "@/errors/not-found-error.error";
 import { StorageService } from "@/libs/storage/storage.service";
+import { FileService } from "../files";
 
 export class PostService {
 	constructor(
 		private readonly post: Repository<Post>,
-		private readonly storage: StorageService
+		private readonly files: FileService
 	) {}
 
 	async getAccountPosts(id: string) {
@@ -66,8 +67,7 @@ export class PostService {
 
 	async save(body: CreatePostDto, files: Express.Multer.File[]) {
 		if (files.length > 0) {
-			console.log("files", files);
-			const response = this.storage.save(files);
+			const response = await this.files.upload(body.account, files);
 			console.log("-----", response);
 		}
 		throw new Error("mistake");

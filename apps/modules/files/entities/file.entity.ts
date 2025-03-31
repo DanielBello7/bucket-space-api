@@ -17,6 +17,15 @@ export class File implements FileType {
 	id!: string;
 
 	@Column({ type: "varchar", length: 255 })
+	url!: string;
+
+	@Column({ type: "varchar", length: 255 })
+	location!: string;
+
+	@Column({ type: "varchar", length: 255 })
+	memory!: string;
+
+	@Column({ type: "varchar", length: 255 })
 	title!: string;
 
 	@Column({ type: "varchar", length: 255 })

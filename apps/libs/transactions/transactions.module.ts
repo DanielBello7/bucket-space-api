@@ -1,22 +1,11 @@
-import { DataSource, QueryRunner } from 'typeorm';
+import { DataSource, QueryRunner } from "typeorm";
+import { TransactionsService } from "./transactions.service";
 
 export class TransactionsModule {
-    constructor(private readonly datasource: DataSource) {}
+	public service: TransactionsService;
 
-    async execute(cb: (transaction: QueryRunner) => Promise<any>) {
-        const transaction = this.datasource.createQueryRunner();
-
-        await transaction.connect();
-        await transaction.startTransaction();
-        try {
-            const response = await cb(transaction);
-            await transaction.commitTransaction();
-            return response;
-        } catch (e) {
-            await transaction.rollbackTransaction();
-            throw e;
-        } finally {
-            await transaction.release();
-        }
-    }
+	constructor(private readonly datasource: DataSource) {
+		const transaction = this.datasource.createQueryRunner();
+		this.service = new TransactionsService(transaction);
+	}
 }

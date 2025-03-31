@@ -30,6 +30,8 @@ export class StorageService {
 		fs.writeFileSync(location, file.buffer);
 		return {
 			location,
+			url: `http://localhost:3000/files/${result}`,
+			result,
 			id,
 		};
 	}
