@@ -14,10 +14,17 @@ import cookie from "cookie-parser";
 import compression from "compression";
 import session from "express-session";
 import routes from "./routes";
+import multer from "multer";
 
 const Store = require("connect-sqlite3")(session);
 
 const app = express();
+
+app.use(multer().any());
+
+app.use(express.urlencoded({ extended: true }));
+
+app.use(express.json());
 
 app.use(compression());
 
@@ -29,10 +36,6 @@ app.use(
 );
 
 app.use(cookie());
-
-app.use(express.json());
-
-app.use(express.urlencoded({ extended: true }));
 
 app.use(
 	limiter({

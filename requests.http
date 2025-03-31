@@ -20,9 +20,27 @@ Accept: application/json
 Content-Type: application/json
 
 
-#### LIVE REQUESTS
+### CREATE POST
+POST http://localhost:3000/posts/
+Accept: application/json
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary
+
+------WebKitFormBoundary
+Content-Disposition: form-data; name="username"
+
+james
+------WebKitFormBoundary
+Content-Disposition: form-data; name="email"
+
+james@gmail.com
+------WebKitFormBoundary
+Content-Disposition: form-data; name="names"
+
+moses
+------WebKitFormBoundary--
 
 
+#### -------- LIVE REQUESTS -----------------------------------------------
 
 ### GET ACCOUNTS
 GET https://bucket-space-api.onrender.com/accounts/

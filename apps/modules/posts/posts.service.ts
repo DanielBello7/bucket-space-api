@@ -3,9 +3,13 @@ import { Post } from "./entities/post.entity";
 import { CreatePostDto } from "./dto/create-post.dto";
 import { UpdatePostDto } from "./dto/update-post.dto";
 import { NotFoundError } from "@/errors/not-found-error.error";
+import { StorageService } from "@/libs/storage/storage.service";
 
 export class PostService {
-	constructor(private readonly post: Repository<Post>) {}
+	constructor(
+		private readonly post: Repository<Post>,
+		private readonly storage: StorageService
+	) {}
 
 	async getAccountPosts(id: string) {
 		return this.post.find({
@@ -61,6 +65,12 @@ export class PostService {
 	}
 
 	async save(body: CreatePostDto, files: Express.Multer.File[]) {
+		if (files.length > 0) {
+			console.log("files", files);
+			const response = this.storage.save(files);
+			console.log("-----", response);
+		}
+		throw new Error("mistake");
 		return this.create(body);
 	}
 

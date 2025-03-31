@@ -8,6 +8,7 @@ import { ValidationError } from "@/errors/validation-error.error";
 export const parseBodyPipe = (dto: new (...args: any[]) => object) => {
 	return (req: Request, _res: Response, next: NextFunction) => {
 		const validator = new dto();
+
 		Object.assign(validator, req.body);
 
 		validate(validator)

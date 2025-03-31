@@ -6,6 +6,6 @@ const router = express.Router();
 
 const module = new FileModule(database);
 
-router.use("/", module.controller.get());
+router.use(module.controller.get());
 
 export default router;
