@@ -1,56 +1,63 @@
-import { Repository } from 'typeorm';
-import { Otp } from './entities/otp.entity';
-import { CreateOtpDto } from './dto/create-otp.dto';
-import { UpdateOtpDto } from './dto/update-otp.dto';
-import { NotFoundError } from '@/errors/not-found-error.error';
+import { Repository, In } from "typeorm";
+import { Otp } from "./entities/otp.entity";
+import { CreateOtpDto } from "./dto/create-otp.dto";
+import { UpdateOtpDto } from "./dto/update-otp.dto";
+import { NotFoundError } from "@/errors/not-found-error.error";
 
 export class OtpService {
-    constructor(private readonly otp: Repository<Otp>) {}
+	constructor(private readonly otp: Repository<Otp>) {}
 
-    async get(query: Record<string, any> = {}) {
-        return this.otp.find({
-            where: query,
-        });
-    }
+	/** removes many otps using ids */
+	async removeByIds(ids: string[]) {
+		return this.otp.delete({
+			id: In(ids),
+		});
+	}
 
-    async findById(id: string) {
-        const response = await this.otp.findOne({
-            where: {
-                id,
-            },
-        });
-        if (!response) {
-            throw new NotFoundError();
-        }
-        return response;
-    }
+	async get(query: Record<string, any> = {}) {
+		return this.otp.find({
+			where: query,
+		});
+	}
 
-    async findByToken(token: string) {
-        const response = await this.otp.findOne({
-            where: {
-                token,
-            },
-        });
-        if (!response) {
-            throw new NotFoundError();
-        }
-        return response;
-    }
+	async findById(id: string) {
+		const response = await this.otp.findOne({
+			where: {
+				id,
+			},
+		});
+		if (!response) {
+			throw new NotFoundError();
+		}
+		return response;
+	}
 
-    async create(body: CreateOtpDto) {
-        const content = this.otp.create(body);
-        return this.otp.save(content);
-    }
+	async findByToken(token: string) {
+		const response = await this.otp.findOne({
+			where: {
+				token,
+			},
+		});
+		if (!response) {
+			throw new NotFoundError();
+		}
+		return response;
+	}
 
-    async update(id: string, body: UpdateOtpDto) {
-        return this.otp.update(id, body);
-    }
+	async create(body: CreateOtpDto) {
+		const content = this.otp.create(body);
+		return this.otp.save(content);
+	}
 
-    async remove(id: string) {
-        return this.otp.delete(id);
-    }
+	async update(id: string, body: UpdateOtpDto) {
+		return this.otp.update(id, body);
+	}
 
-    async removeMany(query: Record<string, any> = {}) {
-        return this.otp.delete(query);
-    }
+	async remove(id: string) {
+		return this.otp.delete(id);
+	}
+
+	async removeMany(query: Record<string, any> = {}) {
+		return this.otp.delete(query);
+	}
 }

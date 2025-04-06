@@ -8,13 +8,25 @@ import { Comment } from "./modules/comments/entities/comment.entity";
 import { Post } from "./modules/posts/entities/post.entity";
 import { Relationship } from "./modules/relationships/entities/relationship.entity";
 import { Share } from "./modules/shares/entities/share.entity";
+import { Refresh } from "./modules/refresh/entities/refresh.entity";
 
 export const database = new DataSource({
 	type: "sqlite",
-	entities: [Account, Comment, File, Like, Otp, Post, Relationship, Share],
-	database: CONFIG.ACTIVE.DATABASE_URI,
+	entities: [
+		Account,
+		Comment,
+		File,
+		Like,
+		Otp,
+		Post,
+		Relationship,
+		Share,
+		Refresh,
+		// additional entities
+	],
 	synchronize: true,
 	logging: false,
-	subscribers: [],
 	migrations: [],
+	database: CONFIG.ACTIVE.DATABASE_URI,
+	subscribers: [],
 });
