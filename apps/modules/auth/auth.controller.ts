@@ -36,6 +36,7 @@ export class AuthController {
 
 	logout = async (req: Request, res: Response, next: NextFunction) => {
 		try {
+			const id = (req.user as any).id;
 			req.session.destroy((err) => {
 				if (err) next(err);
 				else {
@@ -45,6 +46,7 @@ export class AuthController {
 					res.cookie("token", "", {
 						expires: new Date(0),
 					});
+					this.auth.sign_out(id);
 					res.end();
 				}
 			});
