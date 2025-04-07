@@ -2,18 +2,20 @@ import { CONSTANT } from "./typ.constant";
 import path from "path";
 
 export const PRO_CONSTANT: CONSTANT = {
-	DATABASE_URI: path.resolve(__dirname, "../../../../sqls", `bucket.pro.db`),
-	JWT_SECRET: "secret",
+	DATABASE_URI: path.resolve(
+		__dirname,
+		path.join("..", "..", "..", "sqls", `bucket.pro.db`)
+	),
+	DATABASE: (process.env.DATABASE as string) ?? "",
+	DATABASE_DIR: path.resolve(__dirname, "../../../sqls"),
+	JWT_SECRET: (process.env.JWT_SECRET as string) ?? "",
 	NODE_ENV: "production",
-	DATABASE: "bucket.pro.db",
-	DATABASE_DIR: path.resolve(__dirname, "../../../../sqls"),
-	PORT: 3000,
-	SALT: 20,
-	SERVICE: "BUCKET",
-	SESSION_SECRET: "secret",
-	EXPIRES_IN: "24h",
-	EMAIL_API_KEY:
-		"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",
-	APP_EMAIL: "support@unitedbustravel.net",
-	APP_EMAIL_NAME: "bucket.space",
+	PORT: parseInt(process.env.PORT as string) ?? 3000,
+	SALT: parseInt(process.env.SALT as string) ?? 20,
+	SERVICE: (process.env.SERVICE as string) ?? "",
+	SESSION_SECRET: (process.env.SESSION_SECRET as string) ?? "",
+	EXPIRES_IN: (process.env.EXPIRES_IN as string) ?? "",
+	EMAIL_API_KEY: (process.env.EMAIL_API_KEY as string) ?? "",
+	APP_EMAIL: (process.env.APP_EMAIL as string) ?? "",
+	APP_EMAIL_NAME: (process.env.APP_EMAIL_NAME as string) ?? "",
 };

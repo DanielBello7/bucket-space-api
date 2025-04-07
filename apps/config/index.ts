@@ -9,7 +9,7 @@ const CURRENT = {
 	DEV: DEV_CONSTANT,
 	PRO: PRO_CONSTANT,
 };
-const ACTIVE = CURRENT[EXT];
+const ACTIVE: CONSTANT = CURRENT[EXT];
 
 export {
 	ENV,
