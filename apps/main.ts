@@ -1,6 +1,5 @@
 require("reflect-metadata");
 require("module-alias/register");
-require("./config/env/env.config");
 
 import { database } from "./datasource";
 import { errorHandler } from "./middlewares/error-handler";

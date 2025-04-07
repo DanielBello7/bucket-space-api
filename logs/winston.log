@@ -639,3 +639,28 @@
 {"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-31 18:39:19"}
 {"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-31 18:39:20"}
 {"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-03-31 18:40:13"}
+{"code":"ERR_SOCKET_BAD_PORT","level":"error","timestamp":"2025-04-07 00:48:37"}
+{"code":"ERR_SOCKET_BAD_PORT","level":"error","timestamp":"2025-04-07 00:49:45"}
+{"code":"ERR_SOCKET_BAD_PORT","level":"error","timestamp":"2025-04-07 00:51:06"}
+{"code":"ERR_SOCKET_BAD_PORT","level":"error","timestamp":"2025-04-07 00:51:34"}
+{"code":"ERR_SOCKET_BAD_PORT","level":"error","timestamp":"2025-04-07 00:51:48"}
+{"code":"ERR_SOCKET_BAD_PORT","level":"error","timestamp":"2025-04-07 00:52:34"}
+{"code":"ERR_SOCKET_BAD_PORT","level":"error","timestamp":"2025-04-07 00:53:11"}
+{"code":"ERR_SOCKET_BAD_PORT","level":"error","timestamp":"2025-04-07 00:53:26"}
+{"code":"ERR_SOCKET_BAD_PORT","level":"error","timestamp":"2025-04-07 00:53:47"}
+{"code":"ERR_SOCKET_BAD_PORT","level":"error","timestamp":"2025-04-07 00:54:00"}
+{"code":"ERR_SOCKET_BAD_PORT","level":"error","timestamp":"2025-04-07 00:54:28"}
+{"code":"ERR_SOCKET_BAD_PORT","level":"error","timestamp":"2025-04-07 00:55:43"}
+{"code":"ERR_SOCKET_BAD_PORT","level":"error","timestamp":"2025-04-07 00:55:52"}
+{"code":"ERR_SOCKET_BAD_PORT","level":"error","timestamp":"2025-04-07 00:56:15"}
+{"code":"ERR_SOCKET_BAD_PORT","level":"error","timestamp":"2025-04-07 00:58:03"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 00:58:20"}
+{"code":"ERR_SOCKET_BAD_PORT","level":"error","timestamp":"2025-04-07 00:59:31"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 00:59:36"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 00:59:43"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 00:59:56"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 01:00:01"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 01:00:12"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 01:00:18"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 01:00:21"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 01:00:24"}

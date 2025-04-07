@@ -14,8 +14,12 @@ export class FeedService {
 	) {}
 
 	/** get post feed tailored to a particular account */
-	async get_acc_posts_feed(id: string, query: Record<string, any> = {}) {}
+	async get_acc_posts_feed(id: string, query: Record<string, any> = {}) {
+		return this.posts.get(query);
+	}
 
 	/** this gets post feed for visitor accounts */
-	async get_generic_post_feed(query: Record<string, any> = {}) {}
+	async get_generic_post_feed(query: Record<string, any> = {}) {
+		return this.posts.get(query);
+	}
 }
