@@ -11,8 +11,7 @@ const router = express.Router();
 const module = new AccountModule(database);
 
 router.post(
-	"/signup/",
-	session_guard,
+	"/sign_up/",
 	parseBodyPipe(CreateAccountDto),
 	module.controller.create
 );

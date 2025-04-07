@@ -11,20 +11,25 @@ export class FeedModule {
 	public controller: FeedController;
 	public service: FeedService;
 	public datasource: DataSource;
+	public accounts: AccountModule;
+	public posts: PostsModule;
+	public shares: SharesModule;
+	public likes: LikesModule;
+	public relationships: RelationshipModule;
 
 	constructor(datasource: DataSource) {
-		const accounts = new AccountModule(datasource);
-		const posts = new PostsModule(datasource);
-		const shares = new SharesModule(datasource);
-		const likes = new LikesModule(datasource);
-		const relationships = new RelationshipModule(datasource);
+		this.posts = new PostsModule(datasource);
+		this.accounts = new AccountModule(datasource);
+		this.likes = new LikesModule(datasource);
+		this.shares = new SharesModule(datasource);
+		this.relationships = new RelationshipModule(datasource);
 		this.datasource = datasource;
 		this.service = new FeedService(
-			accounts.service,
-			posts.service,
-			shares.service,
-			likes.service,
-			relationships.service
+			this.accounts.service,
+			this.posts.service,
+			this.shares.service,
+			this.likes.service,
+			this.relationships.service
 		);
 		this.controller = new FeedController(this.service);
 	}

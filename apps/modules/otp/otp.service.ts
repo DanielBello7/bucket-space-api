@@ -39,7 +39,7 @@ export class OtpService {
 			},
 		});
 		if (!response) {
-			throw new NotFoundError();
+			throw new NotFoundError("otp token not found");
 		}
 		return response;
 	}

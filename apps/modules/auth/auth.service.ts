@@ -101,7 +101,7 @@ export class AuthService {
 		if (token.email !== email) {
 			throw new UnauthorizedError("invalid credentials");
 		}
-		if (isPast(new Date(token.expiresAt))) {
+		if (isPast(new Date(token.expiresAt).getTime())) {
 			throw new UnauthorizedError("token is expired");
 		}
 		await this.cleanup_otp(email);

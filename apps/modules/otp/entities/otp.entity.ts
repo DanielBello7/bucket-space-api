@@ -16,11 +16,11 @@ export class Otp implements OtpType {
 	email!: string;
 	@Column({ type: "varchar", length: 255 })
 	token!: string;
-	@Column({ type: "date" })
+	@Column({ type: "datetime" })
 	expiresAt!: Date;
-	@Column({ type: "date" })
+	@Column({ type: "datetime" })
 	createdAt!: Date;
-	@Column({ type: "date" })
+	@Column({ type: "datetime" })
 	updatedAt!: Date;
 
 	@BeforeUpdate()

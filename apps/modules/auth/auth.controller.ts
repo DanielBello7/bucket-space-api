@@ -16,8 +16,8 @@ export class AuthController {
 				});
 				return;
 			} else {
-				res.cookie("token", response.token);
-				res.cookie("refsh", response.refresh);
+				(req.session as any).token = response.token;
+				(req.session as any).refsh = response.refresh;
 				res.json(response.payload);
 			}
 		} catch (error) {
@@ -40,12 +40,6 @@ export class AuthController {
 			req.session.destroy((err) => {
 				if (err) next(err);
 				else {
-					res.cookie("refsh", "", {
-						expires: new Date(0),
-					});
-					res.cookie("token", "", {
-						expires: new Date(0),
-					});
 					this.auth.sign_out(id);
 					res.end();
 				}
@@ -59,8 +53,8 @@ export class AuthController {
 		try {
 			const body: RefreshDto = req.body;
 			const response = await this.auth.generate_refresh(body.refresh);
-			res.cookie("token", response.token);
-			res.cookie("refsh", response.refresh);
+			(req.session as any).token = response.token;
+			(req.session as any).refsh = response.refresh;
 			res.json(response);
 		} catch (error) {
 			next(error);

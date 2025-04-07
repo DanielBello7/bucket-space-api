@@ -16,6 +16,5 @@ export class LoginDto {
 	@Expose()
 	@IsOptional()
 	@IsString()
-	@Min(6)
 	otp?: string;
 }

@@ -15,7 +15,7 @@ router.use("/accounts/", accounts);
 
 router.use("/auth/", auth);
 
-router.use("/feed", feed);
+router.use("/feed/", feed);
 
 router.use("/comments/", comments);
 

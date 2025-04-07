@@ -1,6 +1,6 @@
 1. configure authorization for the routes ✅
 2. complete auth routes ✅
 3. complete and make sure the findbyid functions are returning the populated data ✅
-4. complete the feed routes
-5. test the server
+4. complete the feed routes ✅
+5. test the server ✅
 6. check if you can catch the static requests for the /files/ route before passing it over to express.static

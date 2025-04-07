@@ -671,3 +671,67 @@
 {"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 01:04:56"}
 {"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 01:04:59"}
 {"level":"error","message":"NotFoundError, email not registered","timestamp":"2025-04-07 01:05:02"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 09:32:17"}
+{"level":"error","message":"NotFoundError, email not registered","timestamp":"2025-04-07 09:32:21"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 09:33:01"}
+{"level":"error","message":"UnauthorizedError, An unauthorized request has been made","timestamp":"2025-04-07 09:33:07"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 09:33:14"}
+{"level":"error","message":"ValidationError, Error occured during CreateAccountDto validation","timestamp":"2025-04-07 09:33:15"}
+{"level":"error","message":"ValidationError, Error occured during LoginDto validation","timestamp":"2025-04-07 09:35:43"}
+{"level":"error","message":"ValidationError, Error occured during LoginDto validation","timestamp":"2025-04-07 09:36:05"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 09:36:47"}
+{"level":"error","message":"UnauthorizedError, token is expired","timestamp":"2025-04-07 09:36:48"}
+{"level":"error","message":"UnauthorizedError, token is expired","timestamp":"2025-04-07 09:37:05"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 09:37:34"}
+{"level":"error","message":"UnauthorizedError, token is expired","timestamp":"2025-04-07 09:37:35"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 09:38:28"}
+{"level":"error","message":"UnauthorizedError, token is expired","timestamp":"2025-04-07 09:38:30"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 09:39:50"}
+{"level":"error","message":"UnauthorizedError, token is expired","timestamp":"2025-04-07 09:39:52"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 09:40:19"}
+{"level":"error","message":"UnauthorizedError, token is expired","timestamp":"2025-04-07 09:40:22"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 09:40:52"}
+{"level":"error","message":"UnauthorizedError, token is expired","timestamp":"2025-04-07 09:40:52"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 09:42:20"}
+{"level":"error","message":"Internal Server Error, Error Occured","timestamp":"2025-04-07 09:42:27"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 09:43:14"}
+{"level":"error","message":"UnauthorizedError, An unauthorized request has been made","timestamp":"2025-04-07 09:44:11"}
+{"level":"error","message":"UnauthorizedError, An unauthorized request has been made","timestamp":"2025-04-07 09:44:47"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 09:45:03"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 09:45:16"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 09:45:20"}
+{"level":"error","message":"UnauthorizedError, An unauthorized request has been made","timestamp":"2025-04-07 09:45:22"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 09:46:45"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 09:46:56"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 09:47:06"}
+{"level":"error","message":"UnauthorizedError, An unauthorized request has been made","timestamp":"2025-04-07 09:47:10"}
+{"level":"error","message":"NotFoundError, The requested resource was not found","timestamp":"2025-04-07 09:47:17"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 09:52:20"}
+{"level":"error","message":"NotFoundError, The requested resource was not found","timestamp":"2025-04-07 09:52:20"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 09:52:36"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 09:52:47"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 09:53:08"}
+{"level":"error","message":"NotFoundError, The requested resource was not found","timestamp":"2025-04-07 09:53:08"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 09:53:39"}
+{"level":"error","message":"NotFoundError, The requested resource was not found","timestamp":"2025-04-07 09:53:40"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 09:54:13"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 09:54:22"}
+{"level":"error","message":"NotFoundError, otp token not found","timestamp":"2025-04-07 09:54:22"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 09:54:30"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 09:54:39"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 09:54:46"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 09:56:30"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 09:56:57"}
+{"level":"error","message":"Internal Server Error, Error Occured","timestamp":"2025-04-07 09:57:12"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 09:57:27"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 09:57:43"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 09:59:36"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 10:00:40"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 10:00:45"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 10:00:46"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 10:00:54"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 10:00:57"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 10:02:09"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 10:02:30"}
+{"level":"error","message":"ValidationError, Error occured during CreatePostDto validation","timestamp":"2025-04-07 10:09:23"}
+{"level":"error","message":"ValidationError, Error occured during CreateCommentDto validation","timestamp":"2025-04-07 10:13:54"}
