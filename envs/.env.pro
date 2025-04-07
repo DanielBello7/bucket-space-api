@@ -8,6 +8,6 @@ SALT=10
 SERVICE=BUCKET
 SESSION_SECRET=secret
 EXPIRES_IN=24h
-EMAIL_API_KEY=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
+EMAIL_API_KEY=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
 APP_EMAIL=support@unitedbustravel.net
 APP_EMAIL_NAME=bucket.space

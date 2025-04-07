@@ -46,6 +46,7 @@ export class AuthService {
 
 	/** this sends an email to the appropriate account */
 	async generate(email: string) {
+		await this.accounts.findByEmail(email);
 		const previous_tokens = await this.otp.get({ email });
 		const valid = previous_tokens.find((token) => !isPast(token.expiresAt));
 		let token: Otp;

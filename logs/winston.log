@@ -664,3 +664,10 @@
 {"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 01:00:18"}
 {"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 01:00:21"}
 {"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 01:00:24"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 01:00:56"}
+{"level":"error","message":"UnauthorizedError, An unauthorized request has been made","timestamp":"2025-04-07 01:01:39"}
+{"level":"error","message":"ValidationError, Error occured during LoginDto validation","timestamp":"2025-04-07 01:03:02"}
+{"level":"error","message":"Internal Server Error, Error Occured","timestamp":"2025-04-07 01:03:34"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 01:04:56"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-07 01:04:59"}
+{"level":"error","message":"NotFoundError, email not registered","timestamp":"2025-04-07 01:05:02"}
