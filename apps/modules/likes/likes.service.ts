@@ -80,12 +80,28 @@ export class LikeService {
 	}
 
 	async get(query: Record<string, any> = {}) {
-		return this.likes.find({
-			where: query,
+		const page = query.page ? parseInt(query.page, 10) : 1;
+		const take = query.take ? parseInt(query.take, 10) : 100;
+		const skip = (page - 1) * take;
+
+		const { page: _, limit: __, ...filters } = query;
+
+		const [data, total] = await this.likes.findAndCount({
+			where: filters,
+			skip,
+			take,
 			relations: {
 				Account: true,
 			},
 		});
+
+		return {
+			data,
+			total,
+			page,
+			take,
+			totalPages: Math.ceil(total / take),
+		};
 	}
 
 	async findById(id: string) {

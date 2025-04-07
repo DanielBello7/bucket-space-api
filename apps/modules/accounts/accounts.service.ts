@@ -47,9 +47,25 @@ export class AccountService {
 	}
 
 	async get(query: Record<string, any> = {}) {
-		return this.accounts.find({
-			where: query,
+		const page = query.page ? parseInt(query.page, 10) : 1;
+		const take = query.take ? parseInt(query.take, 10) : 100;
+		const skip = (page - 1) * take;
+
+		const { page: _, limit: __, ...filters } = query;
+
+		const [data, total] = await this.accounts.findAndCount({
+			where: filters,
+			skip,
+			take,
 		});
+
+		return {
+			data,
+			total,
+			page,
+			take,
+			totalPages: Math.ceil(total / take),
+		};
 	}
 
 	async update(id: string, body: UpdateAccountDto) {

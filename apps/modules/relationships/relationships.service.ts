@@ -102,7 +102,25 @@ export class RelationshipService {
 	}
 
 	async get(query: Record<string, any> = {}) {
-		return this.relationships.find(query);
+		const page = query.page ? parseInt(query.page, 10) : 1;
+		const take = query.take ? parseInt(query.take, 10) : 100;
+		const skip = (page - 1) * take;
+
+		const { page: _, limit: __, ...filters } = query;
+
+		const [data, total] = await this.relationships.findAndCount({
+			where: filters,
+			skip,
+			take,
+		});
+
+		return {
+			data,
+			total,
+			page,
+			take,
+			totalPages: Math.ceil(total / take),
+		};
 	}
 
 	async create(body: CreateRelationshipDto) {
