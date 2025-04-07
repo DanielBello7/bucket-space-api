@@ -62,9 +62,6 @@ export class AccountService {
 			where: {
 				id,
 			},
-			relations: {
-				Posts: true,
-			},
 		});
 		if (!response) {
 			throw new NotFoundError();

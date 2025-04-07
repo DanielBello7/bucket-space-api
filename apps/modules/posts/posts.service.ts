@@ -55,7 +55,9 @@ export class PostService {
 			},
 			relations: {
 				Account: true,
-				Comments: { Account: true },
+				Comments: {
+					Account: true,
+				},
 			},
 		});
 		if (!response) {
@@ -70,7 +72,6 @@ export class PostService {
 			body.media = response.map((item) => item.url);
 			body.mimetype = response.map((item) => item.mimetype);
 		}
-		console.log("------body", body);
 		return this.create(body);
 	}
 
