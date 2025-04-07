@@ -6,6 +6,7 @@ import auth from "./modules/auth/auth.route";
 import comments from "./modules/comments/comments.route";
 import likes from "./modules/likes/likes.route";
 import posts from "./modules/posts/posts.route";
+import feed from "./modules/feed/feed.route";
 import shares from "./modules/shares/shares.route";
 
 const router = express.Router();
@@ -13,6 +14,8 @@ const router = express.Router();
 router.use("/accounts/", accounts);
 
 router.use("/auth/", auth);
+
+router.use("/feed", feed);
 
 router.use("/comments/", comments);
 

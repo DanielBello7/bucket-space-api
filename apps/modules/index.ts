@@ -8,3 +8,4 @@ export * from "./posts";
 export * from "./relationships";
 export * from "./shares";
 export * from "./refresh";
+export * from "./feed";
