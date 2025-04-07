@@ -26,10 +26,10 @@ export class Comment implements CommentType {
 	@Column({ type: "varchar", length: 1000 })
 	account!: string;
 
-	@Column({ type: "date" })
+	@Column({ type: "datetime" })
 	createdAt!: Date;
 
-	@Column({ type: "date" })
+	@Column({ type: "datetime" })
 	updatedAt!: Date;
 
 	@ManyToOne(() => Account, (account) => account.Comments)

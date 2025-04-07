@@ -32,10 +32,10 @@ export class Post implements PostType {
 	@Column({ type: "simple-json", length: 1000, nullable: true })
 	mimetype!: string[];
 
-	@Column({ type: "date" })
+	@Column({ type: "datetime" })
 	createdAt!: Date;
 
-	@Column({ type: "date" })
+	@Column({ type: "datetime" })
 	updatedAt!: Date;
 
 	@ManyToOne(() => Account, (account) => account.Posts)

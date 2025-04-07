@@ -37,10 +37,10 @@ export class File implements FileType {
 	@Column({ type: "varchar", length: 255 })
 	account!: string;
 
-	@Column({ type: "date" })
+	@Column({ type: "datetime" })
 	updatedAt!: Date;
 
-	@Column({ type: "date" })
+	@Column({ type: "datetime" })
 	createdAt!: Date;
 
 	@ManyToOne(() => Account, (account) => account.Files)

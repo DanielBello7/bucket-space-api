@@ -29,10 +29,10 @@ export class Account implements AccountType {
 	@Column({ length: 255, type: "varchar" })
 	email!: string;
 
-	@Column({ type: "date" })
+	@Column({ type: "datetime" })
 	createdAt!: Date;
 
-	@Column({ type: "date" })
+	@Column({ type: "datetime" })
 	updatedAt!: Date;
 
 	@OneToMany(() => Post, (post) => post.Account)

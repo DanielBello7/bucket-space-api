@@ -22,10 +22,10 @@ export class Relationship implements RelationshipType {
 	@Column({ type: "varchar", length: 255 })
 	following!: string;
 
-	@Column({ type: "date" })
+	@Column({ type: "datetime" })
 	createdAt!: Date;
 
-	@Column({ type: "date" })
+	@Column({ type: "datetime" })
 	updatedAt!: Date;
 
 	@ManyToOne(() => Account, (account) => account.Followers)

@@ -55,7 +55,9 @@ app.use(
 		secret: CONFIG.ACTIVE.SESSION_SECRET,
 		resave: false,
 		saveUninitialized: true,
-		cookie: { maxAge: 60 * 60 * 60 * 24 },
+		cookie: {
+			maxAge: 60 * 60 * 24, // 1day
+		},
 		genid: () => v4(),
 		store: new Store({
 			db: CONFIG.ACTIVE.DATABASE,

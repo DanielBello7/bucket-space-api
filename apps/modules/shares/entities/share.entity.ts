@@ -27,10 +27,10 @@ export class Share implements ShareType {
 	@Column({ type: "varchar", length: 255 })
 	to!: SHARE_ENUM;
 
-	@Column({ type: "date" })
+	@Column({ type: "datetime" })
 	createdAt!: Date;
 
-	@Column({ type: "date" })
+	@Column({ type: "datetime" })
 	updatedAt!: Date;
 
 	@ManyToOne(() => Account, (account) => account.Shares)

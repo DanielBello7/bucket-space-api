@@ -2,12 +2,12 @@ import { CONSTANT } from "./typ.constant";
 import path from "path";
 
 export const PRO_CONSTANT: CONSTANT = {
+	DATABASE: (process.env.DATABASE as string) ?? "",
 	DATABASE_URI: path.resolve(
 		__dirname,
 		path.join("..", "..", "..", "sqls", `bucket.pro.db`)
 	),
-	DATABASE: (process.env.DATABASE as string) ?? "",
-	DATABASE_DIR: path.resolve(__dirname, "../../../sqls"),
+	DATABASE_DIR: path.resolve(__dirname, path.join("..", "..", "..", "sqls")),
 	JWT_SECRET: (process.env.JWT_SECRET as string) ?? "",
 	NODE_ENV: "production",
 	PORT: parseInt(process.env.PORT as string) ?? 3000,

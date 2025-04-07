@@ -15,9 +15,9 @@ export class Refresh implements RefreshType {
 	account!: string;
 	@Column({ type: "varchar", length: 999 })
 	refresh!: string;
-	@Column({ type: "date" })
+	@Column({ type: "datetime" })
 	createdAt!: Date;
-	@Column({ type: "date" })
+	@Column({ type: "datetime" })
 	updatedAt!: Date;
 
 	@BeforeInsert()

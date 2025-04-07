@@ -23,10 +23,10 @@ export class Like implements Likes {
 	@Column({ type: "varchar", length: 255 })
 	account!: string;
 
-	@Column({ type: "date" })
+	@Column({ type: "datetime" })
 	createdAt!: Date;
 
-	@Column({ type: "date" })
+	@Column({ type: "datetime" })
 	updatedAt!: Date;
 
 	@ManyToOne(() => Account, (account) => account.Likes)
