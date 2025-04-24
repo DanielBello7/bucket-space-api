@@ -2,7 +2,7 @@ services:
   server:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: ./Dockerfile
     command: ["npm", "run", "start"]
     container_name: server
     environment:

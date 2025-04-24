@@ -9,9 +9,10 @@
 		"start": "ENV_FILE=envs/.env.pro LOG_PATH=logs/ node dist/apps/main.js",
 		"build": "tsc && resolve-tspaths",
 		"docker:build": "docker-compose build --no-cache && docker image prune -f",
-		"docker:dev": "docker-compose up --remove-orphans",
-		"docker:pro": "docker-compose -f docker-compose.yml up --remove-orphans",
-		"deploy": "npm run docker:build && npm run docker:pro"
+		"docker:install": "docker compose run --rm server npm install",
+		"docker:dev": "docker compose up --remove-orphans",
+		"docker:pro": "docker compose -f docker-compose.yml up --remove-orphans",
+		"deploy": "npm run docker:build && npm run docker:install && npm run docker:pro"
 	},
 	"keywords": [],
 	"author": "",

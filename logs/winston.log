@@ -753,3 +753,6 @@
 {"level":"error","message":"UnauthorizedError, An unauthorized request has been made","timestamp":"2025-04-23 20:59:11"}
 {"level":"error","message":"NotFoundError, otp token not found","timestamp":"2025-04-23 20:59:27"}
 {"level":"error","message":"Internal Server Error, Error Occured","timestamp":"2025-04-23 20:59:32"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-24 09:09:27"}
+{"level":"info","message":"server running on http://localhost:3000","timestamp":"2025-04-24 09:36:59"}
+{"level":"error","message":"UnauthorizedError, An unauthorized request has been made","timestamp":"2025-04-24 09:37:49"}
