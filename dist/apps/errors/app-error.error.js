@@ -23,13 +23,13 @@ var http_status_1 = __importDefault(require("http-status"));
 var AppError = /** @class */ (function (_super) {
     __extends(AppError, _super);
     function AppError(msg, ctx) {
-        if (msg === void 0) { msg = 'An error occured'; }
-        if (ctx === void 0) { ctx = 'error context'; }
+        if (msg === void 0) { msg = "An error occured"; }
+        if (ctx === void 0) { ctx = "error context"; }
         var _this = _super.call(this, msg) || this;
         _this.statusCode = http_status_1.default.INTERNAL_SERVER_ERROR;
         _this.msg = msg;
         _this.context = ctx;
-        _this.title = 'HttpError';
+        _this.title = "HttpError";
         Object.setPrototypeOf(_this, AppError.prototype);
         return _this;
     }

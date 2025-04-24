@@ -15,4 +15,7 @@ export type CONSTANT = {
 	EMAIL_API_KEY: string;
 	APP_EMAIL: string;
 	APP_EMAIL_NAME: string;
+	ENV_FILE: string;
+	LOG_PATH: string;
+	CORS: string;
 };

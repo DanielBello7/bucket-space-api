@@ -4,10 +4,14 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "NODE_ENV=development mocha",
-		"dev": "NODE_ENV=development ts-node-dev --respawn apps/main.ts",
-		"pro": "NODE_ENV=production ts-node-dev --respawn apps/main.ts",
-		"start": "NODE_ENV=production node dist/apps/main.js",
-		"build": "tsc && resolve-tspaths"
+		"dev": "ENV_FILE=envs/.env.dev LOG_PATH=logs/  ts-node-dev --respawn apps/main.ts",
+		"pro": "ENV_FILE=envs/.env.pro LOG_PATH=logs/ ts-node-dev --respawn apps/main.ts",
+		"start": "ENV_FILE=envs/.env.pro LOG_PATH=logs/ node dist/apps/main.js",
+		"build": "tsc && resolve-tspaths",
+		"docker:build": "docker-compose build --no-cache && docker image prune -f",
+		"docker:dev": "docker-compose up --remove-orphans",
+		"docker:pro": "docker-compose -f docker-compose.yml up --remove-orphans",
+		"deploy": "npm run docker:build && npm run docker:pro"
 	},
 	"keywords": [],
 	"author": "",

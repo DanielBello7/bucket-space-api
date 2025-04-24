@@ -24,10 +24,10 @@ var http_status_1 = __importDefault(require("http-status"));
 var NotFoundError = /** @class */ (function (_super) {
     __extends(NotFoundError, _super);
     function NotFoundError(msg, ctx) {
-        if (msg === void 0) { msg = 'The requested resource was not found'; }
-        if (ctx === void 0) { ctx = 'error context'; }
+        if (msg === void 0) { msg = "The requested resource was not found"; }
+        if (ctx === void 0) { ctx = "error context"; }
         var _this = _super.call(this, msg, ctx) || this;
-        _this.title = 'NotFoundError';
+        _this.title = "NotFoundError";
         _this.statusCode = http_status_1.default.NOT_FOUND;
         return _this;
     }

@@ -54,14 +54,8 @@ var AccountService = /** @class */ (function () {
     function AccountService(accounts) {
         this.accounts = accounts;
     }
-    AccountService.prototype.get = function (query) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.accounts.find()];
-            });
-        });
-    };
-    AccountService.prototype.isRegistered = function (email) {
+    /** this checks if the email is used */
+    AccountService.prototype.isUsed = function (email) {
         return __awaiter(this, void 0, void 0, function () {
             var response;
             return __generator(this, function (_a) {
@@ -80,16 +74,77 @@ var AccountService = /** @class */ (function () {
             });
         });
     };
+    /** this registers an account */
     AccountService.prototype.register = function (body) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.isRegistered(body.email)];
+                    case 0: return [4 /*yield*/, this.isUsed(body.email)];
                     case 1:
                         if (_a.sent()) {
-                            throw new bad_request_error_error_1.BadRequestError('Email already registered');
+                            throw new bad_request_error_error_1.BadRequestError("Email already registered");
                         }
                         return [2 /*return*/, this.create(body)];
+                }
+            });
+        });
+    };
+    /** this updates an account excluding important fields */
+    AccountService.prototype.modify = function (id, body) {
+        return __awaiter(this, void 0, void 0, function () {
+            var email, rest;
+            return __generator(this, function (_a) {
+                email = body.email, rest = __rest(body, ["email"]);
+                return [2 /*return*/, this.update(id, rest)];
+            });
+        });
+    };
+    /** returns an account using the email as a query */
+    AccountService.prototype.findByEmail = function (email) {
+        return __awaiter(this, void 0, void 0, function () {
+            var response;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.accounts.findOne({
+                            where: {
+                                email: email,
+                            },
+                        })];
+                    case 1:
+                        response = _a.sent();
+                        if (!response) {
+                            throw new not_found_error_error_1.NotFoundError("email not registered");
+                        }
+                        return [2 /*return*/, response];
+                }
+            });
+        });
+    };
+    AccountService.prototype.get = function () {
+        return __awaiter(this, arguments, void 0, function (query) {
+            var page, take, skip, _, __, filters, _a, data, total;
+            if (query === void 0) { query = {}; }
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        page = query.page ? parseInt(query.page, 10) : 1;
+                        take = query.take ? parseInt(query.take, 10) : 100;
+                        skip = (page - 1) * take;
+                        _ = query.page, __ = query.limit, filters = __rest(query, ["page", "limit"]);
+                        return [4 /*yield*/, this.accounts.findAndCount({
+                                where: filters,
+                                skip: skip,
+                                take: take,
+                            })];
+                    case 1:
+                        _a = _b.sent(), data = _a[0], total = _a[1];
+                        return [2 /*return*/, {
+                                data: data,
+                                total: total,
+                                page: page,
+                                take: take,
+                                totalPages: Math.ceil(total / take),
+                            }];
                 }
             });
         });
@@ -97,7 +152,12 @@ var AccountService = /** @class */ (function () {
     AccountService.prototype.update = function (id, body) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
-                return [2 /*return*/, this.accounts.update(id, body)];
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.accounts.update(id, body)];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/, this.findById(id)];
+                }
             });
         });
     };
@@ -121,19 +181,19 @@ var AccountService = /** @class */ (function () {
             });
         });
     };
-    AccountService.prototype.modify = function (id, body) {
-        return __awaiter(this, void 0, void 0, function () {
-            var email, rest;
-            return __generator(this, function (_a) {
-                email = body.email, rest = __rest(body, ["email"]);
-                return [2 /*return*/, this.update(id, rest)];
-            });
-        });
-    };
     AccountService.prototype.remove = function (id) {
         return __awaiter(this, void 0, void 0, function () {
+            var response;
             return __generator(this, function (_a) {
-                return [2 /*return*/, this.accounts.delete(id)];
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.findById(id)];
+                    case 1:
+                        response = _a.sent();
+                        return [4 /*yield*/, this.accounts.delete(id)];
+                    case 2:
+                        _a.sent();
+                        return [2 /*return*/, response];
+                }
             });
         });
     };

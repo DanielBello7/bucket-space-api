@@ -1,0 +1,16 @@
+services:
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ["npm", "run", "start"]
+    container_name: server
+    environment:
+      - ENV_FILE=envs/.env.pro
+      - LOG_PATH=logs/
+    volumes:
+      - ./envs:/app/envs
+      - ./logs:/app/logs
+      - ./sqls:/app/sqls
+    ports:
+      - "3000:3000"

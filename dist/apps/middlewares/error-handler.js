@@ -9,6 +9,7 @@ var errorHandler = function (error, req, res, nxt) {
     var msg;
     var title;
     var errors = [];
+    console.log("----error", error);
     if (error instanceof validation_error_error_1.ValidationError) {
         msg = error.msg;
         statusCode = error.statusCode;
@@ -21,8 +22,8 @@ var errorHandler = function (error, req, res, nxt) {
         title = error.title;
     }
     else {
-        title = 'Internal Server Error';
-        msg = 'Error Occured';
+        title = "Internal Server Error";
+        msg = "Error Occured";
         statusCode = 500;
     }
     winston_logger_1.logger.error("".concat(title, ", ").concat(msg));

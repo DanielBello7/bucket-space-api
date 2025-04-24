@@ -32,13 +32,21 @@ var __importStar = (this && this.__importStar) || (function () {
         return result;
     };
 })();
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-require('reflect-metadata');
-require('module-alias/register');
-require('./config/env/env.config');
+require("reflect-metadata");
+require("module-alias/register");
 var datasource_1 = require("./datasource");
 var error_handler_1 = require("./middlewares/error-handler");
 var uuid_1 = require("uuid");
@@ -51,20 +59,21 @@ var cookie_parser_1 = __importDefault(require("cookie-parser"));
 var compression_1 = __importDefault(require("compression"));
 var express_session_1 = __importDefault(require("express-session"));
 var routes_1 = __importDefault(require("./routes"));
-var Store = require('connect-sqlite3')(express_session_1.default);
+console.log("----", CONFIG.ACTIVE.CORS.split(","));
+var Store = require("connect-sqlite3")(express_session_1.default);
 var app = (0, express_1.default)();
+app.use(express_1.default.json());
+app.use(express_1.default.urlencoded({ extended: true }));
 app.use((0, compression_1.default)());
 app.use((0, cors_1.default)({
     credentials: true,
-    origin: ['*'],
+    origin: __spreadArray([], CONFIG.ACTIVE.CORS.split(","), true),
 }));
 app.use((0, cookie_parser_1.default)());
-app.use(express_1.default.json());
-app.use(express_1.default.urlencoded({ extended: true }));
 app.use((0, express_rate_limit_1.default)({
     windowMs: 15 * 60 * 1000,
     limit: 100,
-    standardHeaders: 'draft-8',
+    standardHeaders: "draft-8",
     legacyHeaders: false,
 }));
 app.use((0, express_slow_down_1.default)({
@@ -76,7 +85,9 @@ app.use((0, express_session_1.default)({
     secret: CONFIG.ACTIVE.SESSION_SECRET,
     resave: false,
     saveUninitialized: true,
-    cookie: { maxAge: 60 * 60 * 60 * 24 },
+    cookie: {
+        maxAge: 60 * 60 * 24, // 1day
+    },
     genid: function () { return (0, uuid_1.v4)(); },
     store: new Store({
         db: CONFIG.ACTIVE.DATABASE,

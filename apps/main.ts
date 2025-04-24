@@ -14,6 +14,8 @@ import compression from "compression";
 import session from "express-session";
 import routes from "./routes";
 
+console.log("----", CONFIG.ACTIVE.CORS.split(","));
+
 const Store = require("connect-sqlite3")(session);
 
 const app = express();
@@ -27,7 +29,7 @@ app.use(compression());
 app.use(
 	cors({
 		credentials: true,
-		origin: ["*"],
+		origin: [...CONFIG.ACTIVE.CORS.split(",")],
 	})
 );
 

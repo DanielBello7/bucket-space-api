@@ -34,16 +34,35 @@ var __importStar = (this && this.__importStar) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.database = void 0;
-var typeorm_1 = require("typeorm");
-var account_entity_1 = require("./modules/accounts/entities/account.entity");
 var CONFIG = __importStar(require("./config"));
+var typeorm_1 = require("typeorm");
+var file_entity_1 = require("./modules/files/entities/file.entity");
+var like_entity_1 = require("./modules/likes/entities/like.entity");
+var otp_entity_1 = require("./modules/otp/entities/otp.entity");
+var account_entity_1 = require("./modules/accounts/entities/account.entity");
+var comment_entity_1 = require("./modules/comments/entities/comment.entity");
+var post_entity_1 = require("./modules/posts/entities/post.entity");
+var relationship_entity_1 = require("./modules/relationships/entities/relationship.entity");
+var share_entity_1 = require("./modules/shares/entities/share.entity");
+var refresh_entity_1 = require("./modules/refresh/entities/refresh.entity");
 exports.database = new typeorm_1.DataSource({
-    type: 'sqlite',
-    database: CONFIG.ACTIVE.DATABASE_URI,
+    type: "sqlite",
+    entities: [
+        account_entity_1.Account,
+        comment_entity_1.Comment,
+        file_entity_1.File,
+        like_entity_1.Like,
+        otp_entity_1.Otp,
+        post_entity_1.Post,
+        relationship_entity_1.Relationship,
+        share_entity_1.Share,
+        refresh_entity_1.Refresh,
+        // additional entities
+    ],
     synchronize: true,
     logging: false,
-    entities: [account_entity_1.Account],
-    subscribers: [],
     migrations: [],
+    database: CONFIG.ACTIVE.DATABASE_URI,
+    subscribers: [],
 });
 //# sourceMappingURL=datasource.js.map
