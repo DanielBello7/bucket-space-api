@@ -12,5 +12,6 @@ services:
       - ./envs:/app/envs
       - ./logs:/app/logs
       - ./sqls:/app/sqls
+      - ./asst:/app/asst
     ports:
       - "3000:3000"
